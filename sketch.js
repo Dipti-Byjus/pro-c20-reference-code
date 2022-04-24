@@ -21,10 +21,7 @@ function setup() {
     frictionAir:0.01
   }
 
-  var rock_options = {
-    restitution: 0.85,
 
-  }
    
    var ground_options ={
      isStatic: true
@@ -34,15 +31,11 @@ function setup() {
   ground = Bodies.rectangle(200,390,400,20,ground_options);
   World.add(world,ground);
 
-  wall = Bodies.rectangle(300,200,200,20,ground_options);
-  World.add(world,wall);
+ 
 
   ball = Bodies.circle(100,10,20,ball_options);
   World.add(world,ball);
   
-  rock = Bodies.circle(250,10,20,rock_options);
-  World.add(world,rock);
-
   rectMode(CENTER);
   ellipseMode(RADIUS);
 }
@@ -56,8 +49,7 @@ function draw()
   ellipse(ball.position.x,ball.position.y,20);
   rect(ground.position.x,ground.position.y,400,20);
 
-  ellipse(rock.position.x,rock.position.y,20);
-  rect(wall.position.x,wall.position.y,200,20);
+  
  
 }
 
